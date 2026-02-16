@@ -1,9 +1,10 @@
 # SWE-QA: A Dataset and Benchmark for Complex Code Understanding
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue)](https://your-username.github.io/swe-qa/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue)](https://lailanelkoussy.github.io/swe-qa/)
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper/paper.pdf)
+[![LREC 2026](https://img.shields.io/badge/LREC-2026-green)](https://lrec-coling-2026.org/)
 
-**Anonymous submission for LREC 2026**
+**Accepted at LREC-COLING 2026**
 
 ## Overview
 
@@ -16,17 +17,24 @@ This repository contains **SWE-QA**, a comprehensive dataset and benchmark for e
 
 ## Quick Links
 
-- 🌐 **[Project Page](https://your-username.github.io/swe-qa/)** - Interactive overview with dataset details
+- 🌐 **[Project Page](https://lailanelkoussy.github.io/swe-qa/)** - Jekyll-powered project site with interactive overview
 - 📄 **[Paper](paper/paper.pdf)** - Full research paper (PDF)
 - 📊 **[Dataset](datasets/)** - Download datasets and view documentation
 
-## Repository Structure
+### Main Branch Contents
 
 ```
 .
-├── index.html              # GitHub Pages project page
-├── style.css               # Styling for project page
 ├── paper/
+│   └── paper.pdf          # Research paper
+├── datasets/
+│   ├── README.md          # Detailed dataset documentation
+│   ├── mcq_dataset.zip    # Oracle setting questions (9,072 questions)
+│   ├── mcq_dataset_with_distractors.zip  # Noisy oracle setting
+│   └── repos/             # Code chunks and metadata (12 repositories)
+├── assets/
+│   └── teaser.pdf         # Teaser figure
+└── README.md              # This file
 │   └── paper.pdf          # Research paper
 ├── datasets/
 │   ├── README.md          # Detailed dataset documentation
@@ -62,9 +70,26 @@ The dataset covers 12 popular Python repositories:
 
 ## Getting Started
 
-1. **View the project page**: Visit the [GitHub Pages site](https://your-username.github.io/swe-qa/) for an interactive overview
+1. **View the project page**: Visit the [Jekyll-powered project site](https://lailanelkoussy.github.io/swe-qa/) for an interactive overview
 2. **Download the datasets**: Get the question sets from the [datasets](datasets/) folder
 3. **Read the documentation**: Check the [Dataset README](datasets/README.md) for detailed structure and usage information
+
+## About the Website
+
+The project website is built with **Jekyll** and hosted on the `gh-pages` branch. To view or modify the website:
+
+```bash
+# Switch to the gh-pages branch
+git checkout gh-pages
+
+# Install Jekyll (if needed)
+gem install bundler jekyll
+
+# Serve locally
+bundle exec jekyll serve
+
+# View at http://localhost:4000/swe-qa/
+```
 
 ## Dataset Structure
 
@@ -74,23 +99,26 @@ Each question in the dataset includes:
 - **Multiple-choice options**: 4 options (A, B, C, D)
 - **Correct answer**: Ground truth label
 - **Category**: DC (Declaration-and-Call) or IE (Interacting Entities)
-- **Repository**: Source repository name
-
-For detailed JSON schemas and examples, see the [Dataset README](datasets/README.md).
-
-## Citation
+- *Citation
 
 If you use this dataset in your research, please cite our paper:
 
 ```bibtex
-@inproceedings{swe-qa-2026,
-  title={Multi-hop Code Comprehension: A Dataset and Benchmark for Complex Code Understanding},
-  author={Anonymous},
-  booktitle={Proceedings of LREC 2026},
+@inproceedings{elkoussy2026sweqa,
+  title={SWE-QA: A Dataset and Benchmark for Complex Code Understanding},
+  author={El Koussy, Laila and others},
+  booktitle={Proceedings of LREC-COLING 2026},
   year={2026}
 }
 ```
 
+## License
+
+This dataset is released for research purposes. Please see the paper for detailed terms.
+
+---
+
+© 2026 Laila El Koussy. LREC-COLING 2026
 ## GitHub Pages Setup
 
 To enable the project page:
