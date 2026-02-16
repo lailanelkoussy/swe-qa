@@ -185,25 +185,12 @@ p {
     margin: 40px 0;
 }
 
-.teaser-pdf {
-    width: 100%;
-    max-width: 800px;
-    height: 500px;
+.teaser-image {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
     box-shadow: var(--shadow);
     border: 1px solid var(--border-color);
-}
-
-.teaser-fallback {
-    padding: 20px;
-    background-color: var(--bg-light);
-    border-radius: 8px;
-    border: 1px dashed var(--border-color);
-}
-
-.teaser-fallback a {
-    color: var(--secondary-color);
-    font-weight: 500;
 }
 
 /* Abstract Section */
@@ -440,10 +427,6 @@ a:hover {
         width: 100%;
         justify-content: center;
     }
-
-    .teaser-pdf {
-        height: 400px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -458,10 +441,6 @@ a:hover {
     .btn {
         padding: 12px 20px;
         font-size: 0.95rem;
-    }
-
-    .teaser-pdf {
-        height: 300px;
     }
 }
 
