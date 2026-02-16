@@ -74,23 +74,6 @@ The dataset covers 12 popular Python repositories:
 2. **Download the datasets**: Get the question sets from the [datasets](datasets/) folder
 3. **Read the documentation**: Check the [Dataset README](datasets/README.md) for detailed structure and usage information
 
-## About the Website
-
-The project website is built with **Jekyll** and hosted on the `gh-pages` branch. To view or modify the website:
-
-```bash
-# Switch to the gh-pages branch
-git checkout gh-pages
-
-# Install Jekyll (if needed)
-gem install bundler jekyll
-
-# Serve locally
-bundle exec jekyll serve
-
-# View at http://localhost:4000/swe-qa/
-```
-
 ## Dataset Structure
 
 Each question in the dataset includes:
@@ -106,7 +89,7 @@ If you use this dataset in your research, please cite our paper:
 ```bibtex
 @inproceedings{elkoussy2026sweqa,
   title={SWE-QA: A Dataset and Benchmark for Complex Code Understanding},
-  author={El Koussy, Laila and others},
+  author={El Koussy, Laila and Perez, Julien},
   booktitle={Proceedings of LREC-COLING 2026},
   year={2026}
 }
@@ -116,23 +99,4 @@ If you use this dataset in your research, please cite our paper:
 
 This dataset is released for research purposes. Please see the paper for detailed terms.
 
----
 
-© 2026 Laila El Koussy. LREC-COLING 2026
-## GitHub Pages Setup
-
-To enable the project page:
-
-1. Go to your repository **Settings**
-2. Navigate to **Pages** in the left sidebar
-3. Under **Source**, select the **main** (or **master**) branch
-4. Click **Save**
-5. The site will be available at `https://your-username.github.io/repository-name/`
-
-## License
-
-This dataset is released for research purposes only. See paper for details.
-
----
-
-© 2026 Anonymous Authors. For review purposes only.
