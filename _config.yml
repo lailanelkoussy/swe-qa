@@ -1,0 +1,46 @@
+# Site settings
+title: "SWE-QA"
+description: "A Dataset and Benchmark for Complex Code Understanding"
+author: "Laila El Koussy"
+baseurl: "/swe-qa"
+url: "https://lailanelkoussy.github.io"
+
+# Conference details
+conference: "LREC-COLING 2026"
+conference_url: "https://lrec-coling-2026.org/"
+
+# Repository links
+github_username: lailanelkoussy
+repository: swe-qa
+paper_pdf: "paper/paper.pdf"
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections (if needed in future)
+collections:
+  datasets:
+    output: false
+
+# Default values
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"

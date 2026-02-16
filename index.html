@@ -1,0 +1,166 @@
+---
+layout: default
+title: Home
+---
+
+<section class="teaser">
+    <object data="{{ site.baseurl }}/assets/teaser.pdf" type="application/pdf" class="teaser-pdf">
+        <div class="teaser-fallback">
+            <p>Your browser doesn't support embedded PDFs. <a href="{{ site.baseurl }}/assets/teaser.pdf">Download the teaser figure</a> instead.</p>
+        </div>
+    </object>
+</section>
+
+<section class="abstract">
+    <h2>Abstract</h2>
+    <p>
+        We present <strong>SWE-QA</strong>, a comprehensive dataset and benchmark for evaluating multi-hop code comprehension 
+        in real-world software projects. The dataset contains <strong>9,072 multiple-choice questions</strong> generated from 
+        <strong>12 popular Python repositories</strong> selected from SWE-bench, designed to test complex code understanding 
+        capabilities that require reasoning across multiple code entities and files.
+    </p>
+    <p>
+        Our benchmark evaluates two key aspects of code comprehension: <strong>Declaration-and-Call (DC)</strong> reasoning, 
+        which tests the ability to connect entity declarations with their usage, and <strong>Interacting Entities (IE)</strong> 
+        reasoning, which assesses understanding of how multiple code entities interact within a codebase.
+    </p>
+</section>
+
+<section class="paper">
+    <h2>Paper</h2>
+    <p>
+        Our paper has been accepted at <strong>{{ site.conference }}</strong>. 
+        Read the full paper for detailed methodology, experimental results, and analysis.
+    </p>
+    <div class="paper-link">
+        <a href="{{ site.baseurl }}/paper/paper.pdf" class="btn btn-primary" download>
+            <span class="icon">📄</span>
+            Download Paper (PDF)
+        </a>
+    </div>
+</section>
+
+<section class="dataset">
+    <h2>Dataset</h2>
+    <p>
+        The SWE-QA dataset is designed to evaluate multi-hop code comprehension with two question categories 
+        and two experimental settings for comprehensive evaluation.
+    </p>
+    
+    <div class="dataset-features">
+        <div class="feature-card">
+            <h3>9,072</h3>
+            <p>Multiple-choice questions</p>
+        </div>
+        <div class="feature-card">
+            <h3>12</h3>
+            <p>Python repositories from SWE-bench</p>
+        </div>
+        <div class="feature-card">
+            <h3>2</h3>
+            <p>Question categories (DC & IE)</p>
+        </div>
+        <div class="feature-card">
+            <h3>2</h3>
+            <p>Experimental settings</p>
+        </div>
+    </div>
+
+    <div class="dataset-details">
+        <h3>Dataset Components</h3>
+        <ul>
+            <li>
+                <strong>Oracle Setting (mcq_dataset.zip)</strong> - 9,072 questions with only relevant code chunks, 
+                testing pure comprehension ability without noise
+            </li>
+            <li>
+                <strong>Noisy Oracle Setting (mcq_dataset_with_distractors.zip)</strong> - Same questions with additional 
+                distractor chunks, simulating realistic code retrieval scenarios
+            </li>
+            <li>
+                <strong>Code Repositories (repos/)</strong> - Processed code chunks and entity metadata for all 12 repositories
+            </li>
+        </ul>
+        
+        <h3>Question Categories</h3>
+        <ul>
+            <li>
+                <strong>Declaration-and-Call (DC)</strong> - 4,584 questions testing the ability to trace from entity 
+                declarations to their usage or vice versa
+            </li>
+            <li>
+                <strong>Interacting Entities (IE)</strong> - 4,488 questions evaluating understanding of interactions 
+                between multiple code entities
+            </li>
+        </ul>
+
+        <h3>Repositories Included</h3>
+        <div class="repo-list">
+            <span class="repo-badge">astropy</span>
+            <span class="repo-badge">django</span>
+            <span class="repo-badge">matplotlib</span>
+            <span class="repo-badge">seaborn</span>
+            <span class="repo-badge">flask</span>
+            <span class="repo-badge">requests</span>
+            <span class="repo-badge">pylint</span>
+            <span class="repo-badge">pytest</span>
+            <span class="repo-badge">xarray</span>
+            <span class="repo-badge">scikit-learn</span>
+            <span class="repo-badge">sphinx</span>
+            <span class="repo-badge">sympy</span>
+        </div>
+    </div>
+
+    <div class="download-section">
+        <a href="https://github.com/{{ site.github_username }}/{{ site.repository }}/raw/main/datasets/mcq_dataset.zip" class="btn btn-secondary">
+            <span class="icon">📦</span>
+            Oracle Questions
+        </a>
+        <a href="https://github.com/{{ site.github_username }}/{{ site.repository }}/raw/main/datasets/mcq_dataset_with_distractors.zip" class="btn btn-secondary">
+            <span class="icon">📦</span>
+            Noisy Oracle Questions
+        </a>
+        <a href="https://github.com/{{ site.github_username }}/{{ site.repository }}/tree/main/datasets" class="btn btn-tertiary" target="_blank" rel="noopener">
+            <span class="icon">📁</span>
+            Browse All Datasets
+        </a>
+    </div>
+
+    <div class="dataset-details">
+        <h3>Dataset Structure</h3>
+        <p>
+            Each question in the dataset includes formatted code chunks with metadata, a natural language question, 
+            four multiple-choice options, the correct answer, category label, and repository information. 
+            For detailed JSON schemas and usage instructions, please see the 
+            <a href="https://github.com/{{ site.github_username }}/{{ site.repository }}/blob/main/datasets/README.md" target="_blank" rel="noopener">Dataset README</a> 
+            in the main branch.
+        </p>
+    </div>
+</section>
+
+<section class="citation">
+    <h2>Citation</h2>
+    <p>If you use this dataset in your research, please cite our paper:</p>
+    <pre><code>@inproceedings{elkoussy2026sweqa,
+  title={SWE-QA: A Dataset and Benchmark for Complex Code Understanding},
+  author={El Koussy, Laila and others},
+  booktitle={Proceedings of LREC-COLING 2026},
+  year={2026}
+}</code></pre>
+</section>
+
+<section class="repository">
+    <h2>Code & Repository</h2>
+    <p>
+        The complete dataset, paper PDF, and documentation are available in the 
+        <a href="https://github.com/{{ site.github_username }}/{{ site.repository }}" target="_blank" rel="noopener">main branch</a> 
+        of our GitHub repository. The repository uses branch separation: the <code>main</code> branch contains all datasets and documentation, 
+        while the <code>gh-pages</code> branch (this site) provides an interactive project page.
+    </p>
+    <div class="paper-link">
+        <a href="https://github.com/{{ site.github_username }}/{{ site.repository }}" class="btn btn-tertiary" target="_blank" rel="noopener">
+            <span class="icon">📂</span>
+            View on GitHub
+        </a>
+    </div>
+</section>
