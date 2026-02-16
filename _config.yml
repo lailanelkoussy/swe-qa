@@ -6,8 +6,8 @@ baseurl: "/swe-qa"
 url: "https://lailanelkoussy.github.io"
 
 # Conference details
-conference: "LREC-COLING 2026"
-conference_url: "https://lrec-coling-2026.org/"
+conference: "LREC 2026"
+conference_url: "https://lrec2026.info/"
 
 # Repository links
 github_username: lailanelkoussy
