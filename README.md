@@ -89,7 +89,7 @@ If you use this dataset in your research, please cite our paper:
 ```bibtex
 @inproceedings{elkoussy2026sweqa,
   title={SWE-QA: A Dataset and Benchmark for Complex Code Understanding},
-  author={El Koussy, Laila and Perez, Julien},
+  author={ElKoussy, Laila and Perez, Julien},
   booktitle={Proceedings of LREC-COLING 2026},
   year={2026}
 }
