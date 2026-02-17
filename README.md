@@ -3,6 +3,7 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue)](https://lailanelkoussy.github.io/swe-qa/)
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper/paper.pdf)
 [![LREC 2026](https://img.shields.io/badge/LREC-2026-green)](https://lrec-coling-2026.org/)
+[![Hugging Face](https://img.shields.io/badge/🤗-Hugging%20Face-yellow)](https://huggingface.co/datasets/lailaelkoussy/swe-qa)
 
 **Accepted at LREC-COLING 2026**
 
@@ -20,6 +21,7 @@ This repository contains **SWE-QA**, a comprehensive dataset and benchmark for e
 - 🌐 **[Project Page](https://lailanelkoussy.github.io/swe-qa/)** - Jekyll-powered project site with interactive overview
 - 📄 **[Paper](paper/paper.pdf)** - Full research paper (PDF)
 - 📊 **[Dataset](datasets/)** - Download datasets and view documentation
+- 🤗 **[Hugging Face Dataset](https://huggingface.co/datasets/lailaelkoussy/swe-qa)** - Available on Hugging Face Hub
 
 ### Main Branch Contents
 
@@ -47,6 +49,20 @@ This repository contains **SWE-QA**, a comprehensive dataset and benchmark for e
 ## Datasets
 
 ### Download
+
+The dataset is **available on [Hugging Face](https://huggingface.co/datasets/lailaelkoussy/swe-qa)** and can be loaded directly:
+
+```python
+from datasets import load_dataset
+
+# Load the oracle setting (clean)
+dataset = load_dataset("lailaelkoussy/swe-qa", split="oracle")
+
+# Load the noisy oracle setting
+dataset_noisy = load_dataset("lailaelkoussy/swe-qa", split="noisy_oracle")
+```
+
+Alternatively, download the files directly:
 
 - **[Oracle Questions](datasets/mcq_dataset.zip)** (9,072 questions) - Questions with only relevant code chunks
 - **[Noisy Oracle Questions](datasets/mcq_dataset_with_distractors.zip)** - Questions with additional distractor chunks
