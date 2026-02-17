@@ -40,7 +40,9 @@ title: Home
     <h2>Dataset</h2>
     <p>
         The SWE-QA dataset is designed to evaluate multi-hop code comprehension with two question categories 
-        and two experimental settings for comprehensive evaluation.
+        and two experimental settings for comprehensive evaluation. The dataset is <strong>available on 
+        <a href="https://huggingface.co/datasets/lailaelkoussy/swe-qa" target="_blank" rel="noopener">🤗 Hugging Face</a></strong> 
+        and can be loaded directly using the <code>datasets</code> library.
     </p>
     
     <div class="dataset-features">
@@ -108,6 +110,10 @@ title: Home
     </div>
 
     <div class="download-section">
+        <a href="https://huggingface.co/datasets/lailaelkoussy/swe-qa" class="btn btn-primary" target="_blank" rel="noopener">
+            <span class="icon">🤗</span>
+            Hugging Face Dataset
+        </a>
         <a href="https://github.com/{{ site.github_username }}/{{ site.repository }}/raw/main/datasets/mcq_dataset.zip" class="btn btn-secondary">
             <span class="icon">📦</span>
             Oracle Questions
@@ -123,12 +129,25 @@ title: Home
     </div>
 
     <div class="dataset-details">
-        <h3>Dataset Structure</h3>
+        <h3>Dataset Structure & Usage</h3>
         <p>
             Each question in the dataset includes formatted code chunks with metadata, a natural language question, 
-            four multiple-choice options, the correct answer, category label, and repository information. 
+            four multiple-choice options, the correct answer, category label, and repository information.
+        </p>
+        <p>
+            <strong>Quick Start with Hugging Face:</strong>
+        </p>
+        <pre><code>from datasets import load_dataset
+
+# Load the oracle setting
+dataset = load_dataset("lailaelkoussy/swe-qa", split="oracle")
+
+# Load the noisy oracle setting
+dataset_noisy = load_dataset("lailaelkoussy/swe-qa", split="noisy_oracle")</code></pre>
+        <p>
             For detailed JSON schemas and usage instructions, please see the 
-            <a href="https://github.com/{{ site.github_username }}/{{ site.repository }}/blob/main/datasets/README.md" target="_blank" rel="noopener">Dataset README</a> 
+            <a href="https://huggingface.co/datasets/lailaelkoussy/swe-qa" target="_blank" rel="noopener">Hugging Face dataset card</a>
+            or the <a href="https://github.com/{{ site.github_username }}/{{ site.repository }}/blob/main/datasets/README.md" target="_blank" rel="noopener">Dataset README</a> 
             in the main branch.
         </p>
     </div>
