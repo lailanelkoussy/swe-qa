@@ -16,3 +16,9 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+
+*.env
+HF_DATASET_README.md
+push_to_huggingface.py
+requirements_hf.txt
